@@ -51,6 +51,34 @@
   <link rel="apple-touch-startup-image" href="img/startup-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
   <link rel="apple-touch-startup-image" href="img/startup-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
   
+  <style type="text/css">
+#nicetable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+#nicetable td, #nicetable th {
+    font-size: 1em;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+#nicetable th {
+    font-size: 1.1em;
+    text-align: left;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+}
+
+#nicetable tr.alt td {
+    color: white;
+}
+
+
+  </style>
+
 </head>
 <body class="">
   
@@ -82,7 +110,7 @@
       </div>
       <div id="/section-1/page-3" class="ft-page" data-id="page-3">
         <h1>Who am I</h1>
-        <p><img src="img/profile.png"></p>
+        <p><img src="img/profile.png" style="max-height:25%"></p>
         <ul>
           <li><strong>Peter Bagrij,</strong> Lead Software Engineer</li>
           <li>currently working for a swiss investment bank, developing an integrated trading platform which deals with <a href="http://en.wikipedia.org/wiki/Structured_product">structured products</a></li>
@@ -147,7 +175,7 @@
       </div>
       <div id="/section-2/page-6" class="ft-page" data-id="page-5">
         <h1>Software development lifecycle</h1>        
-        <img style="margin-left:auto;margin-right:auto;" width="100%" src="img/process.png">
+        <img style="margin-left:auto;margin-right:auto;height:auto;width:80%;" src="img/process.png">
       </div>
       <div id="/section-2/page-6" class="ft-page" data-id="page-6">
         <h1>Software architecture - definitions #1</h1>
@@ -190,6 +218,16 @@
       </div>
       <div id="/section-2/page-9" class="ft-page" data-id="page-9">
         <h1>Software architecture vs design</h1>
+        <p>All architecture is design but not all design is architecture. Architect draws the boundary between architectural and non-architectural design.<p>
+        <table id="nicetable">
+          <tr><td><strong>attribute</strong></td><td><strong>architecture</strong></td><td><strong>design</strong></td></tr>
+          <tr><td>level of details</td><td>highest level of abstraction of the system</td><td>lower level, detailed view of <br/>the components, modules</td></tr>
+          <tr><td>rules/guidelines</td><td>defines the guidelines<br>which framework, which methodology</td><td>uses the guidelines</td></tr>
+          <tr><td>timing</td><td>done earlier</td><td>done after the architecture</td></tr>
+          <tr><td>created by</td><td>the architect</td><td>the development team and/or the architect</td></tr>
+          <tr><td>primary concern</td><td>what is done, where is done</td><td>how it is done</td></tr>
+          <tr><td>target audience</td><td>customer<br>project manager<br>developers<br></td><td>developers</td></tr>
+        </table>
       </div>
     </div>
 
@@ -285,27 +323,27 @@
           Look at the source code to learn how to write the markup.</p>
       </div>
       <div id="/section-5/page-2" class="ft-page" data-id="page-2" data-title="Fluid Images">
-        <a href="http://www.genereavventura.com" target="_blank"><img src="../../assets/img/genereavventura.jpg"></a>
+        <a href="http://www.genereavventura.com" target="_blank"><img src="assets/img/genereavventura.jpg"></a>
       </div>
       <div id="/section-5/page-3" class="ft-page" data-id="page-3">
         <h1>Stacked Images</h1>
         <div class="stack">
-          <div class="stacked"><img src="../../assets/img/mi1-stacked-0.png"></div>
-          <div class="ft-fragment stacked"><img src="../../assets/img/mi1-stacked-1.png"></div>
-          <div class="ft-fragment stacked"><img src="../../assets/img/mi1-stacked-2.png"></div>
-          <div class="ft-fragment stacked"><img src="../../assets/img/mi1-stacked-3.png"></div>
-          <div class="ft-fragment stacked"><img src="../../assets/img/mi1-stacked-4.png"></div>
-          <div class="ft-fragment stacked"><img src="../../assets/img/mi1-stacked-5.png"></div>
-          <div class="ft-fragment stacked"><img src="../../assets/img/mi1-stacked-6.png"></div>
+          <div class="stacked"><img src="assets/img/mi1-stacked-0.png"></div>
+          <div class="ft-fragment stacked"><img src="assets/img/mi1-stacked-1.png"></div>
+          <div class="ft-fragment stacked"><img src="assets/img/mi1-stacked-2.png"></div>
+          <div class="ft-fragment stacked"><img src="assets/img/mi1-stacked-3.png"></div>
+          <div class="ft-fragment stacked"><img src="assets/img/mi1-stacked-4.png"></div>
+          <div class="ft-fragment stacked"><img src="assets/img/mi1-stacked-5.png"></div>
+          <div class="ft-fragment stacked"><img src="assets/img/mi1-stacked-6.png"></div>
         </div>
       </div>
       <div id="/section-5/page-4" class="ft-page" data-id="page-4">
         <div class="stack-center">
           <h1 class="stacked-center">Centered Stacked Images</h1>
         </div>
-        <div class="ft-fragment stack-center"><img class="stacked-center" src="../../assets/img/mi2-concept-art.jpg"></div>
-        <div class="ft-fragment stack-center"><img class="stacked-center" src="../../assets/img/mi2-original.jpg"></div>
-        <div class="ft-fragment stack-center"><img class="stacked-center" src="../../assets/img/mi2-special-edition.jpg"></div>
+        <div class="ft-fragment stack-center"><img class="stacked-center" src="assets/img/mi2-concept-art.jpg"></div>
+        <div class="ft-fragment stack-center"><img class="stacked-center" src="assets/img/mi2-original.jpg"></div>
+        <div class="ft-fragment stack-center"><img class="stacked-center" src="assets/img/mi2-special-edition.jpg"></div>
       </div>
       <div id="/section-5/page-5" class="ft-page" data-id="page-5">
         <div class="stack-center">
@@ -329,9 +367,9 @@
       </div>
       <div id="/section-6/page-2" class="ft-page parallax-demo" data-id="page-2">
         <h1>The Invaders from Audiogalaxy</h1>
-        <img class="kingmix parallax" src="../../assets/img/kingmix.png" data-parallax="1500,1500">
-        <img class="sax parallax" src="../../assets/img/sax.png" data-parallax="750,750">
-        <img class="tone parallax" src="../../assets/img/tone.png" data-parallax="500,500">
+        <img class="kingmix parallax" src="assets/img/kingmix.png" data-parallax="1500,1500">
+        <img class="sax parallax" src="assets/img/sax.png" data-parallax="750,750">
+        <img class="tone parallax" src="assets/img/tone.png" data-parallax="500,500">
       </div>
       <div id="/section-6/page-3" class="ft-page" data-id="page-3">
         <h1>This Page Is Just for Testing the Parallax</h1>
