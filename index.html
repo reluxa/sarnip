@@ -76,8 +76,11 @@
     color: white;
 }
 
-
-  </style>
+.center {
+  margin-left:auto;
+  margin-right:auto;
+}
+</style>
 
 </head>
 <body class="">
@@ -100,7 +103,8 @@
             <li>software architectures</li>
             <ul>
               <li>introduction and definition</li>
-              <li>common architecture patterns</li>
+              <li>documentation of the architecture</li>
+              <li>common patterns</li>
             </ul>
             <li>tasks of a software architect</li>
             <li>questions &amp; answers</li>
@@ -174,7 +178,7 @@
         <img style="margin-left:auto;margin-right:auto;" height="50%" src="img/sqrt.png">
       </div>
       <div id="/section-2/page-6" class="ft-page" data-id="page-5">
-        <h1>Software development lifecycle</h1>        
+        <h1>Software development lifecycle, RfP Process</h1>        
         <img style="margin-left:auto;margin-right:auto;height:auto;width:80%;" src="img/process.png">
       </div>
       <div id="/section-2/page-6" class="ft-page" data-id="page-6">
@@ -219,9 +223,9 @@
       <div id="/section-2/page-9" class="ft-page" data-id="page-9">
         <h1>Software architecture vs design</h1>
         <p>All architecture is design but not all design is architecture. Architect draws the boundary between architectural and non-architectural design.<p>
-        <table id="nicetable">
+        <table class="center" id="nicetable">
           <tr><td><strong>attribute</strong></td><td><strong>architecture</strong></td><td><strong>design</strong></td></tr>
-          <tr><td>level of details</td><td>highest level of abstraction of the system</td><td>lower level, detailed view of <br/>the components, modules</td></tr>
+          <tr><td>level of details</td><td>highest level of abstraction of the system</td><td>lower level, detailed view of <br/>the components, modules/td></tr>
           <tr><td>rules/guidelines</td><td>defines the guidelines<br>which framework, which methodology</td><td>uses the guidelines</td></tr>
           <tr><td>timing</td><td>done earlier</td><td>done after the architecture</td></tr>
           <tr><td>created by</td><td>the architect</td><td>the development team and/or the architect</td></tr>
@@ -233,27 +237,94 @@
 
     <div class="ft-section" data-id="section-3">
       <div id="/section-3/page-1" class="ft-page" data-id="page-1">
-        <h1>Fragments Support</h1>
-        <p>The built in fragments navigation allows to advance step by step inside a page.<br>
-          Press down to try.</p>
-        <p class="ft-fragment">You can discover single elements <span class="ft-fragment">or even a single part of an element, <span class="ft-fragment">one <span class="ft-fragment">at <span class="ft-fragment">a <span class="ft-fragment">time.</span></span></span></span></span></p>
-        <p class="ft-fragment">Fragments navigation is deeply customizable with some configuration options<br>
-          You can learn how in the <a href="https://github.com/marcolago/flowtime.js" target="_blank">documentation</a>.</p>
+        <h1>Architecture documentation</h1>
+        <p>The result of the process is a document (sometimes acompanied by PoC). No defacto standard for the format, 
+          many templates are available: <a href="http://confluence.arc42.org/display/LANDINGZON/landing+zone">Arc42</a> or the <a href="https://wiki.sei.cmu.edu/sad/index.php/Software_Architecture_Documentation_Template">SEI Software Architecture Document Template</a>
+        </p>
+        <ul>
+          <li>scope, requirements, main usecases</li>
+          <li>assumptions</li>
+          <li>architectural goals and constraints</li>
+          <li>selected technologies</li>
+          <li>architecture representation via views</li>
+          <ul>
+            <li>logical view</li>
+            <li>process view</li>
+            <li>implementation view</li>
+            <li>deployment view</li>
+            <li>usecase view</li>
+            <li>data view</li>
+          </ul>
+          <li>non functional requirements, quality attributes</li>
+        </ul>
       </div>
       <div id="/section-3/page-2" class="ft-page" data-id="page-2">
-        <h1>Fragments Unleashed</h1>
-        <p>Fragments can be more than just delayed piece of page.<p>
-        <p>Thanks to some special classes you can add a couple of useful custom behaviours.</p>
+        <h1>Requirements, scope, main usecases</h1>
         <ul>
-          <li class="ft-fragment step">The <code>.step</code> fragment will partially fades out;</li>
-          <li class="ft-fragment shy">The <code>.shy</code> fragment will completely hides itself;</li>
-          <li class="ft-fragment">You can use this two special fragment types to easily create special effects.</li>
+          <li>helps to understand the context, the system boundaries</li>
+          <li>what is in and what is out</li>
+          <li>summary of all the requirements from the different stakeholders (enduser, sponsor, operators)</li>
+          <li>the main usescases</li>
         </ul>
-        <p><span class="ft-fragment shy">This</span> <span class="ft-fragment shy">is</span> <span class="ft-fragment shy">a</span> <span class="ft-fragment shy"><code>.shy</code></span> <span class="ft-fragment shy">example!</span></p>
-        <p><span class="ft-fragment step">And</span> <span class="ft-fragment step">this</span> <span class="ft-fragment step">is</span> <span class="ft-fragment step">a</span> <span class="ft-fragment step"><code>.step</code></span> <span class="ft-fragment step">one!</span></p>
+        <p>Examples:</p>
+        <blockquote>XYZ is a voice based communication application which works on TCP/IP networks. The user can login, and can see the available users.
+        The users are identified by their username. The user can initiate voice call by clicking on the other online user. If the other party accepts 
+        the call then the voice connection is established and the users can talk to each other until one of them terminates the call by clicking on the
+        hangup button. The users of the system can send text messages to each other. Text messages can be sent to users which are offline. 
+        In that case the user receives the message next time when it logs in into the system. The users are charged based on their phone calls. 
+        The user has a balance which can be filled up online using credit card. The online payment system is provided by ZZZ. 
+        The application must run on any windows 7 machine equipped with soundcard headset, but shall be easily portable to other operating systems...</blockquote>
       </div>
-    </div>
+      <div id="/section-3/page-3" class="ft-page" data-id="page-3">
+        <h1>requirements, scope, main usecases</h1>
+        <img class="center" src="http://www.plantuml.com:80/plantuml/png/2orEBLBGrRLJqF39Jy_Cq-GAXGkuPUQbA9G2kSN8eiv5gOabgGh9YJavoC8XYJdPcbmQmQb0FRcfnSM9wQcQ2ZQwkWeW9LmQGQd9gPbbgGWf93ctp9mSXQJ4dCIyP5I9mDBKeafiCg78ZiulBT440000">
+        <br>
+        <img class="center" src="http://www.plantuml.com:80/plantuml/png/Sqp9pSnJqDMrKz1mJyrBBKeiILN8p2lBJqxLv794o0MMfXPLAfGM9wQdAXIb5kGNbMW20000">
+      </div>
+      <div id="/section-3/page-4" class="ft-page" data-id="page-4">
+        <h1>Requirements, scope, main usecases</h1>
+        <img class="center" src="img/mainusecases.gif">
+      </div>
 
+      <div id="/section-3/page-5" class="ft-page" data-id="page-5">
+        <h1>Assumptions</h1>
+        <ul>
+          <li>the RfP process is often time limimited</li>
+          <li>there are details which could not be clarified fully</li>
+          <li>the assumptions must be differentiated from the requirements originated from the customer</li>
+          <li>must be sorted out as soon as possible</li>
+          <li>fills in the gaps</li>
+        </ul>
+        <p>Examples:</p>
+        <ul>
+          <li><strong>"which works on TCP/IP networks"</strong> Internet or intranet? We assume it shall work on Intranet</li>
+          <li><strong>"the users are identified by their username"</strong> How the user is authenticated? We assume they are authenticated with passwords</li>
+          <li><strong>"Text messages can be sent to users which are offline"</strong> What is the maximum size of text message? We assume it is 160 chars</li>
+        </ul> 
+      </div>
+      <div id="/section-3/page-6" class="ft-page" data-id="page-6">
+        <h1>Architectural goals and constraints</h1>
+        <p>Contians further restrictions which are written in the requirements or derived from the requirements or 
+          gathered from the stakeholder. Often contains <a href="http://en.wikipedia.org/wiki/List_of_system_quality_attributes">quality attributes</a>.</p>
+        <p>Examples:</p>
+        <ul>
+          <li>The customer might have already a <strong>license</strong> of a sound encoder algorithm which he want to use</li>
+          <li>The customer has an <strong>exclusive</strong> contract with an infrastructure provider => they don't maintain only Windows based servers.</li>
+          <li>The product owner mentioned during the kickoff that the system must support <strong>1 million of simultanus voice calls</strong>. The network utilization can concluded from this.</li>
+          <li>It has to be integrated with an online payment system. If we plan to store credit card information then the <strong>security</strong> is a concern.</li>
+        </ul> 
+      </div>
+      <div id="/section-3/page-7" class="ft-page" data-id="page-7">
+        <h1>Selected technologies</h1>
+        <p>Should detail the selcted technologies. Has strong impact on certain quality attributes. The knowledge of the team might be considered also.</p>
+        <p>Examples:</p>
+        <ul>
+          <li><strong>Programming Language</strong>, the performance critical part of the sounds codec is written in C or ASM</li>
+          <li><strong>Environment</strong> the server side will use JBoss application server</li>
+        </ul> 
+      </div>
+
+    </div>
     <div class="ft-section" data-id="section-4">
       <div id="/section-4/page-1" class="ft-page" data-id="page-1">
         <h1>Default HTML Structures</h1>
@@ -323,6 +394,7 @@
           Look at the source code to learn how to write the markup.</p>
       </div>
       <div id="/section-5/page-2" class="ft-page" data-id="page-2" data-title="Fluid Images">
+        <h1>Image Management</h1>
         <a href="http://www.genereavventura.com" target="_blank"><img src="assets/img/genereavventura.jpg"></a>
       </div>
       <div id="/section-5/page-3" class="ft-page" data-id="page-3">
