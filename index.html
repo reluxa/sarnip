@@ -90,7 +90,7 @@
       <div id="/section-1/page-1" class="ft-page" data-id="page-1" data-title="Introduction to Software Architectures">
         <div class="stack-center">
           <div class="stacked-center">
-            <h1>Intorudction<br/>to software architectures</h1> 
+            <h1>Introduction<br/>to software architectures</h1> 
             </h2>for non IT people</h2>
           </div>
         </div>
@@ -155,7 +155,7 @@
         <a href="http://en.wikipedia.org/wiki/X86_instruction_listings">here</a></p>
         <img src="img/machine_code.png" style="margin-left:auto;margin-right:auto;"></img>
         <p><span class="ft-fragment">It is hard to work with native instruction codes <strong>:-(</strong></span><br/>        
-        <span class="ft-fragment">Higher level of programming languages were inveted <strong>:-)</strong></span>
+        <span class="ft-fragment">Higher level of programming languages were invented <strong>:-)</strong></span>
         </p>
       </div>
       <div id="/section-2/page-3" class="ft-page" data-id="page-3">
@@ -201,14 +201,14 @@
           the selection of the <strong>structural elements</strong> and their <strong>interfaces</strong> by which the system is composed; 
           behavior as specified in <strong>collaboration</strong> among those elements; <strong>composition</strong> of these structural and behavioral elements into larger subsystems; 
           and an architectural style that guides this organization. Software architecture also involves functionality, usability, resilience, performance, 
-          reuse, comprehensibility, economic and technology <strong>constraints, tradeoffs</strong> and aesthetic concerns</blockquote>
+          reuse, comprehensibility, economic and technology <strong>constraints, trade offs</strong> and aesthetic concerns</blockquote>
       </div>
       <div id="/section-2/page-8" class="ft-page" data-id="page-8">
         <h1>Software architecture - Mashup</h1>
         <ul>
           <li class="ft-fragment">aids understanding of how the system will behave</li>
           <li class="ft-fragment">meets requirements</li>
-          <li class="ft-fragment">fullfills quality attributes</li>
+          <li class="ft-fragment">fulfills quality attributes</li>
           <li class="ft-fragment">decisions</li>
           <li class="ft-fragment">blueprint</li>
           <li class="ft-fragment">work assignment (scope)</li>
@@ -217,7 +217,7 @@
           <li class="ft-fragment">collaboration of elements</li>
           <li class="ft-fragment">composition of elements</li>
           <li class="ft-fragment">interface of elements</li>
-          <li class="ft-fragment">constraints, tradeoffs</li>
+          <li class="ft-fragment">constraints, trade offs</li>
         <ul>
       </div>
       <div id="/section-2/page-9" class="ft-page" data-id="page-9">
@@ -225,10 +225,10 @@
         <p>All architecture is design but not all design is architecture. Architect draws the boundary between architectural and non-architectural design.<p>
         <table class="center" id="nicetable">
           <tr><td><strong>attribute</strong></td><td><strong>architecture</strong></td><td><strong>design</strong></td></tr>
-          <tr><td>level of details</td><td>highest level of abstraction of the system</td><td>lower level, detailed view of <br/>the components, modules/td></tr>
-          <tr><td>rules/guidelines</td><td>defines the guidelines<br>which framework, which methodology</td><td>uses the guidelines</td></tr>
+          <tr><td>level of details</td><td>highest level of abstraction of the system</td><td>lower level, detailed view of <br/>the components, modules</td></tr>
+          <tr><td>rules / guidelines</td><td>defines the guidelines<br>which framework, which methodology</td><td>uses the guidelines</td></tr>
           <tr><td>timing</td><td>done earlier</td><td>done after the architecture</td></tr>
-          <tr><td>created by</td><td>the architect</td><td>the development team and/or the architect</td></tr>
+          <tr><td>created by</td><td>the architect</td><td>the development team and / or the architect</td></tr>
           <tr><td>primary concern</td><td>what is done, where is done</td><td>how it is done</td></tr>
           <tr><td>target audience</td><td>customer<br>project manager<br>developers<br></td><td>developers</td></tr>
         </table>
@@ -238,25 +238,32 @@
     <div class="ft-section" data-id="section-3">
       <div id="/section-3/page-1" class="ft-page" data-id="page-1">
         <h1>Architecture documentation</h1>
-        <p>The result of the process is a document (sometimes acompanied by PoC). No defacto standard for the format, 
+        <p>The result of the process is a document (sometimes accompanied by PoC). No defacto standard for the format, 
           many templates are available: <a href="http://confluence.arc42.org/display/LANDINGZON/landing+zone">Arc42</a> or the <a href="https://wiki.sei.cmu.edu/sad/index.php/Software_Architecture_Documentation_Template">SEI Software Architecture Document Template</a>
         </p>
+        <div>
+        <div style="float:left;width:50%">
         <ul>
           <li>scope, requirements, main usecases</li>
           <li>assumptions</li>
           <li>architectural goals and constraints</li>
           <li>selected technologies</li>
-          <li>architecture representation via views</li>
+          <li><a href="http://en.wikipedia.org/wiki/4%2B1_architectural_view_model">4+1</a> architectural view</li>
           <ul>
             <li>logical view</li>
             <li>process view</li>
             <li>implementation view</li>
             <li>deployment view</li>
             <li>usecase view</li>
-            <li>data view</li>
           </ul>
           <li>non functional requirements, quality attributes</li>
         </ul>
+        </div>
+        <div style="float:left;width:50%;vertical-align:middle;height:100%">
+          <img style="vertical-align:middle" src="img/41view.png">
+        </div>
+        </div>
+
       </div>
       <div id="/section-3/page-2" class="ft-page" data-id="page-2">
         <h1>Requirements, scope, main usecases</h1>
@@ -289,7 +296,7 @@
       <div id="/section-3/page-5" class="ft-page" data-id="page-5">
         <h1>Assumptions</h1>
         <ul>
-          <li>the RfP process is often time limimited</li>
+          <li>the RfP process is often time limited</li>
           <li>there are details which could not be clarified fully</li>
           <li>the assumptions must be differentiated from the requirements originated from the customer</li>
           <li>must be sorted out as soon as possible</li>
@@ -304,25 +311,89 @@
       </div>
       <div id="/section-3/page-6" class="ft-page" data-id="page-6">
         <h1>Architectural goals and constraints</h1>
-        <p>Contians further restrictions which are written in the requirements or derived from the requirements or 
+        <p>Contains further restrictions which are written in the requirements or derived from the requirements or 
           gathered from the stakeholder. Often contains <a href="http://en.wikipedia.org/wiki/List_of_system_quality_attributes">quality attributes</a>.</p>
         <p>Examples:</p>
         <ul>
           <li>The customer might have already a <strong>license</strong> of a sound encoder algorithm which he want to use</li>
           <li>The customer has an <strong>exclusive</strong> contract with an infrastructure provider => they don't maintain only Windows based servers.</li>
-          <li>The product owner mentioned during the kickoff that the system must support <strong>1 million of simultanus voice calls</strong>. The network utilization can concluded from this.</li>
-          <li>It has to be integrated with an online payment system. If we plan to store credit card information then the <strong>security</strong> is a concern.</li>
+          <li>The product owner mentioned during the kickoff that the system must support <strong>1 million of simultaneous voice calls</strong>. The network utilization can concluded from this.</li>
+          <li>It has to be integrated with an on-line payment system. If we plan to store credit card information then the <strong>security</strong> is a concern.</li>
         </ul> 
       </div>
       <div id="/section-3/page-7" class="ft-page" data-id="page-7">
         <h1>Selected technologies</h1>
-        <p>Should detail the selcted technologies. Has strong impact on certain quality attributes. The knowledge of the team might be considered also.</p>
+        <p>Section should list the selected technologies. Has strong impact on certain quality attributes. 
+          The knowledge of the team might be considered also (a technology without hands on experience might be a risk).
+          Probably this is the most exciting part for the vast majority of the architects :)</p>
         <p>Examples:</p>
         <ul>
           <li><strong>Programming Language</strong>, the performance critical part of the sounds codec is written in C or ASM</li>
           <li><strong>Environment</strong> the server side will use JBoss application server</li>
+          <li><strong>P2P</strong> architecture instead of the regular client server</li>
+          <li>The <strong>frameworks</strong> (Spring, AngularJS, ExtJS) can be selected</li>
+          <li>System wide decision can be fixed like <strong>libraries</strong> for logging, exception handling, monitoring</li>
+          <li>Testing tools</li>
+          <li>Continuous Integration / Continuous Deployment tools</li>
         </ul> 
       </div>
+      <div id="/section-3/page-8" class="ft-page" data-id="page-8">
+        <div>
+          <div style="float:left;width:50%">
+            <h1>Logical view</h1>
+            <p>A description of the logical view of the architecture. Describes the most <strong>important classes</strong>, 
+              their organization in service packages and <strong>subsystems</strong>, and the organization of these subsystems into <strong>layers</strong>. 
+              Also describes the <strong>most important use-case realizations</strong>, for example, the dynamic aspects of the architecture. 
+              Class diagrams may be included to illustrate the <strong>relationships</strong> between architecturally significant classes, 
+              subsystems, packages and layers.</p>
+            </div>
+        <div style="float:left;width:50%;height:70%">
+          <img src="img/logical.png">
+        </div>
+        </div>
+      </div>
+
+     <div id="/section-3/page-9" class="ft-page" data-id="page-9">
+        <h1>Process view</h1>
+        <div>
+          <div style="float:left;width:50%">
+            <p>Describes the <strong>processes and threads</strong> involved in the system's execution,
+              their interactions and configurations. Also describes the allocation of objects and classes to tasks.</p>
+           <ul>
+            <li>startup shutdown</li>
+            <li>concurrency and synchronization, deadlocks</li>
+            <li>performance, throughput</li>
+           </ul>
+          </div>
+        <div style="float:left;width:50%;height:70%">
+          <img src="img/processview.png">
+        </div>
+        </div>
+      </div>
+
+      <div id="/section-3/page-10" class="ft-page" data-id="page-10">
+        <h1>Deployment view</h1>
+        <div>
+          <div style="float:left;width:50%">
+            <p>Describes the various <strong>physical nodes</strong> for the most typical platform configurations.
+              Also describes the <strong>allocation of tasks</strong> (from the Process View) to the physical nodes.</p>
+            </div>
+        <div style="float:left;width:50%;height:70%">
+          <img src="img/deployment.png">
+        </div>
+        </div>
+      </div>
+
+      <div id="/section-3/page-11" class="ft-page" data-id="page-11">
+        <h1>Implementation view</h1>
+        <p>Describes the organization of static software modules (source code, data files, executables, documentation etc.) 
+        in the development environment in terms of: </p>
+        <ul>
+          <li>Packaging and layering</li>
+          <li>Configuration management (ownership, release strategy etc.)</li>
+        </ul>        
+      </div>
+
 
     </div>
     <div class="ft-section" data-id="section-4">
