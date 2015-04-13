@@ -80,6 +80,11 @@
   margin-left:auto;
   margin-right:auto;
 }
+
+.twocolumns {
+  float:left;
+  width:50%;
+}
 </style>
 
 </head>
@@ -388,41 +393,86 @@
         <h1>Implementation view</h1>
         <p>Describes the organization of static software modules (source code, data files, executables, documentation etc.) 
         in the development environment in terms of: </p>
-        <ul>
-          <li>Packaging and layering</li>
-          <li>Configuration management (ownership, release strategy etc.)</li>
-        </ul>        
+        <div style="float:left;width:50%">
+            <ul>
+              <li>Packaging and layering</li>
+              <li>Configuration management (ownership, release strategy etc.)</li>
+              <li>Modeled using <a href="http://www.tutorialspoint.com/uml/uml_quick_guide.htm">UML</a></li>
+              <li>Components and classes</li>
+              <li>Component and interfaces</li>
+            </ul>        
+          </div>
+          <div style="float:left;width:50%;height:70%">
+            <img src="img/implementationview.png">
+          </div>
       </div>
 
-
+      <div id="/section-3/page-12" class="ft-page" data-id="page-12">
+        <h1>Non functional requirements</h1>
+        <p>What is the difference between the functional requirements and the non functional requirement?</p>
+        <p class="ft-fragment"><strong>Functional Requirements</strong>: specify the functionality of the system. 
+          (e.g. fields in a form)</p>
+        <p class="ft-fragment"><strong>Non Functional Requirements</strong>: specify the quality of the system, 
+          is mostly related to the satisfiability of the user. <span class="ft-fragment">~abilities</span></p>
+        <span class="ft-fragment">Accessibility,    &nbsp;&nbsp;&#8226;Audit and control,   <strong>&nbsp;&nbsp;&#8226;Availability (see service level agreement)</strong>,   &nbsp;&nbsp;&#8226;Backup,   &nbsp;&nbsp;&#8226;Capacity,   &nbsp;&nbsp;&#8226;
+          current and forecast,   &nbsp;&nbsp;&#8226;Certification,    &nbsp;&nbsp;&#8226;Compliance,    &nbsp;&nbsp;&#8226;Configuration management,    &nbsp;&nbsp;&#8226;Dependency on other parties,   &nbsp;&nbsp;&#8226;
+          Deployment,   &nbsp;&nbsp;&#8226;Documentation,    &nbsp;&nbsp;&#8226;Disaster recovery,   &nbsp;&nbsp;&#8226;Efficiency (resource consumption for given load),   &nbsp;&nbsp;&#8226;
+          Effectiveness (resulting performance in relation to effort),    &nbsp;&nbsp;&#8226;Emotional factors (like fun or absorbing or has "Wow! Factor"),    &nbsp;&nbsp;&#8226;
+          Environmental protection,   &nbsp;&nbsp;&#8226;Escrow,   &nbsp;&nbsp;&#8226;Exploitability,   <strong>&nbsp;&nbsp;&#8226;Extensibility (adding features, and carry-forward of customizations at next major version upgrade),</strong>   &nbsp;&nbsp;&#8226;
+          Failure management,   &nbsp;&nbsp;&#8226;Fault tolerance (e.g. Operational System Monitoring,    &nbsp;&nbsp;&#8226;Measuring,   &nbsp;&nbsp;&#8226;and Management),    &nbsp;&nbsp;&#8226;
+          Legal and licensing issues or patent-infringement-avoidability,   &nbsp;&nbsp;&#8226;Interoperability,   &nbsp;&nbsp;&#8226;Maintainability,    &nbsp;&nbsp;&#8226;
+          Modifiability,    &nbsp;&nbsp;&#8226;Network topology,    &nbsp;&nbsp;&#8226;Open source,   &nbsp;&nbsp;&#8226;Operability,    <strong>&nbsp;&nbsp;&#8226;Performance / response time (performance engineering)</strong>,   &nbsp;&nbsp;&#8226;
+          Platform compatibility,   &nbsp;&nbsp;&#8226;Price,    &nbsp;&nbsp;&#8226;Privacy,   <strong>&nbsp;&nbsp;&#8226;Portability</strong>,    &nbsp;&nbsp;&#8226;Quality (e.g. faults discovered,   &nbsp;&nbsp;&#8226;faults delivered,   &nbsp;&nbsp;&#8226;fault removal efficacy),    &nbsp;&nbsp;&#8226;
+          Recovery / recoverability (e.g. mean time to recovery - MTTR),    &nbsp;&nbsp;&#8226;Reliability (e.g. mean time between failures - MTBF,   &nbsp;&nbsp;&#8226;or availability),   &nbsp;&nbsp;&#8226;
+          Reporting,    <strong>&nbsp;&nbsp;&#8226;Resilience</strong>,    <strong>&nbsp;&nbsp;&#8226;Resource constraints (processor speed, memory, disk space, network bandwidth, etc.)</strong>,   &nbsp;&nbsp;&#8226;
+          Response time,    &nbsp;&nbsp;&#8226;Reusability,   &nbsp;&nbsp;&#8226;Robustness,   &nbsp;&nbsp;&#8226;Safety or Factor of safety,   &nbsp;&nbsp;&#8226;Scalability (horizontal,    &nbsp;&nbsp;&#8226;vertical),   &nbsp;&nbsp;&#8226;
+          Security,   &nbsp;&nbsp;&#8226;Software,   &nbsp;&nbsp;&#8226;tools,    &nbsp;&nbsp;&#8226;standards etc. Compatibility,    &nbsp;&nbsp;&#8226;Stability,   &nbsp;&nbsp;&#8226;Supportability,   &nbsp;&nbsp;&#8226;Testability,    <strong>&nbsp;&nbsp;&#8226;
+          Usability by target user community</strong>,   &nbsp;&nbsp;&#8226;User Friendliness</span>
+      </div>
     </div>
+
     <div class="ft-section" data-id="section-4">
       <div id="/section-4/page-1" class="ft-page" data-id="page-1">
-        <h1>Default HTML Structures</h1>
-        <p>Flowtime.js comes with a default theme that styles the most common HTML structures, like:</p>
-        <h1>1<sup>st</sup> Level Heading</h1>
-        <h2>2<sup>nd</sup> Level Heading</h2>
-        <h3>3<sup>rd</sup> Level Heading</h3>
-        <h4>4<sup>th</sup>, 5<sup>th</sup> and 6<sup>th</sup> Level Heading</h4>
-      </div>
-      <div id="/section-4/page-2" class="ft-page" data-id="page-2">
-        <h1>Unordered Lists</h1>
-        <ul>
-          <li>An item.</li>
-          <li>Another item.</li>
-          <li>Just another item.</li>
-          <li>Ok, we get it!</li>
+        <h1>Architecture patterns</h1>
+        <p>Why are good to think in patterns? <span class="ft-fragment">Why to reinvent the wheel? Similar problems mostly have similar solutions.</span></p>
+        <ul class="ft-fragment">
+          <li>general, reusable solution to a commonly occurring problem</li>
+          <li>similar to software <a href="http://en.wikipedia.org/wiki/Software_design_pattern">design patterns</a> but have a broader scope</li>
+          <li>architecture pattern can reuse software design patterns</li>
+          <li>address various issues such as computer hardware performance limitations, high availability and minimization of a business risk. </li>
+          <li>Some patterns have been implemented as software frameworks</li>
+          <li>Complex systems might use multiple architectural patterns at the same time</li>
         </ul>
       </div>
-      <div id="/section-4/page-3" class="ft-page" data-id="page-3">
-        <h1>Ordered Lists</h1>
-        <ol>
-          <li>One.</li>
-          <li>Two.</li>
-          <li>Three.</li>
-          <li>Four.</li>
-        </ol>
+      <div id="/section-4/page-2" class="ft-page" data-id="page-2">
+        <h1>Client server</h1>
+        <p><strong>Client</strong> also known as front-end requests the data via the <strong>network</strong> from the <strong>server</strong> which is also know as the back-end. Can we name an example?</p>
+
+        <div class="ft-fragment twocolumns">
+          <img src="img/client_server_outlook.jpg">
+          <p>Examples:</p>
+          <ul>
+            <li>Outlook</li>
+            <li>FTP Server</li>
+            <li>ITunes</li>
+            <li>Web applications (QPF, UPSA, PMC, etc) </li>
+          </ul>
+        </div>
+        <div class="ft-fragment twocolumns">
+          <ul>
+            <li>very popular</li>
+            <li>multiple client can connect to the same server</li>
+            <li>the client and the server is separated and connected via the network</li>
+            <li>load balancing: more server serves the client</li>
+            <li>thin client vs thick client / rich client</li>
+            <li>stateless vs stateful backends</li>
+            <li>2-Tier architecture (presentation, data)</li>
+          </ul>
+        </div>
+
+
       </div>
+
       <div id="/section-4/page-4" class="ft-page" data-id="page-4">
         <h1>Definition Lists</h1>
         <dl>
